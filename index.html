@@ -151,6 +151,18 @@
             },500);
             }
         }
+
+        const reload = document.querySelector('button');
+        reload.addEventListener('click',(e)=>{
+            e.preventDefault();
+            init();
+            const rndcards = createCards();
+        putcards(rndcards);
+
+
+        createCards();
+        flipcar();
+        })
         init();
         const rndcards = createCards();
         putcards(rndcards);
