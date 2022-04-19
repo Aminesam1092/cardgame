@@ -34,14 +34,14 @@
             border-radius: 50px;
             background: #d6fff8;
             box-shadow:  0px 5px 10px #b6d9d3,
-             0px 0px 100px #ffb0f1;
+             0px 0px 100px #fff5fd;
             line-height: 50px;
             cursor: pointer;
         }
         li:hover{
             border-radius: 50px;
-            background: #d6fff8;
-            box-shadow: inset 20px 20px 60px #b6d9d3,
+            background: #15ffd8;
+            box-shadow: inset 20px 20px 60px #cfe5ff,
             inset -20px -20px 60px #f6ffff;
         }
         .samecard{
@@ -66,6 +66,12 @@
             secondnum,
             point,
             flipcount;
+
+        const init = ()=>{
+            const spantag =  document.querySelector('span');
+            spantag.innerHTML = lifepointe;
+        }
+
         const createCards = ()=>{
             let cards = [];//カード番号角の配列
             for(let i =1;i <= cardnum;i++){
@@ -78,7 +84,6 @@
                else{
                    i--;
                }
-               cards[cardindex] = num;
             }
             console.log(cards);
             return cards;
@@ -87,11 +92,15 @@
         const putcards = (cards)=>{
             let listtag = '';
             for(let i = 0;i< cards.length;i++){
-                listtag += '<li data-num="'+cards[i]+'">'+cards[i]+'</li>';
+                listtag += '<li data-num="'+cards[i]+'">?</li>';
+
             }
             const ultag = document.querySelector('ul');
             ultag.insertAdjacentHTML('afterbegin',listtag);
         }
+
+
+        init();
         const rndcards = createCards();
         putcards(rndcards);
 
