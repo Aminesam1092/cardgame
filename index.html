@@ -64,9 +64,16 @@
                let num = Math.ceil(i / 2);
               let cardindex =  Math.floor(Math.random() * cardnum);
                console.log(num);
+               if(cards[cardindex] == undefined){
+                   cards[cardindex] = num;
+               }
+               else{
+                   i--;
+               }
                cards[cardindex] = num;
             }
             console.log(cards);
+            return cards;
         }
         createCards();
     </script>
