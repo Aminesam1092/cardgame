@@ -75,6 +75,15 @@
             console.log(cards);
             return cards;
         }
+
+        const putcards = (cards)=>{
+            let listtag = '';
+            for(let i = 0;i< cards.length;i++){
+                listtag += '<li data-num="'+cards[i]+'">'
+            }
+        }
+
+
         createCards();
     </script>
 </body>
