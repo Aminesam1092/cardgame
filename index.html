@@ -114,6 +114,7 @@
         const evalution = (e)=>{
             const cardnum = e.target.dataset.num;
             console.log(cardnum);
+            const cardtext = e.target.innerHTML;
             e.target.innerHTML = cardnum;//カードのはてなを数字に置き換える
             if(firstnum == undefined){
                 firstnum = cardnum;
