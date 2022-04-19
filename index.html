@@ -35,7 +35,7 @@
             border-radius: 50px;
             background: #d6fff8;
             box-shadow:  0px 5px 10px #b6d9d3,
-             0px 0px 100px #fff5fd;
+            0px 0px 100px #fff5fd;
             line-height: 50px;
             cursor: pointer;
         }
@@ -132,6 +132,10 @@
                 second.classList.add('samecard');
                 firstnum = undefined;
                 secondnum = undefined;//init
+                point++;
+                if(point >= cardnum / 2){
+                    alert('clear');
+                }
             }
             else if((firstnum != undefined) && (secondnum != undefined)){
                 flipcount--;
