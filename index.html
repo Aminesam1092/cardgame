@@ -109,17 +109,19 @@
         }
 
         const evalution = (e)=>{
+            let first,second;
             const cardnum = e.target.dataset.num;
             console.log(cardnum);
             e.target.innerHTML = cardnum;//カードのはてなを数字に置き換える
             if(firstnum == undefined){
                 firstnum = cardnum;
+                first = e.target;
             }
             else{
                 secondnum = cardnum;
             }
             if(firstnum == secondnum){
-                
+
             }
         }
         init();
