@@ -99,6 +99,14 @@
             ultag.insertAdjacentHTML('afterbegin',listtag);
         }
 
+        //カードがクリックされたら実行
+
+        const flipcar = ()=>{
+            const litags = document.querySelectorAll('li');
+            litags.forEach((value)=>{
+                value.addEventListener('click')
+            });
+        }
 
         init();
         const rndcards = createCards();
