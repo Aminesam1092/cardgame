@@ -9,6 +9,7 @@
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         li{
             list-style: none;
@@ -64,13 +65,14 @@
         const lifepointe  = 10;
         let firstnum,
             secondnum,
-            point,
-            flipcount;
+            point,//特典
+            flipcount;//残り回数
             let first,second;
 
         const init = ()=>{
             const spantag =  document.querySelector('span');
             spantag.innerHTML = lifepointe;
+            flipcount = lifepointe;
         }
 
         const createCards = ()=>{
@@ -132,7 +134,12 @@
                 if(flipcount <= 0){//0を下回る
                     alert('GameOver');
                 }
-
+                setTimeout(()=>{
+                const spantag = document.querySelector('span');
+                spantag.innerHTML = flipcount;
+                first.innerHTML = '?';
+                second.innerHTML = '?';
+            },500);
             }
         }
         init();
