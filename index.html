@@ -109,7 +109,18 @@
         }
 
         const evalution = (e)=>{
-            const cardnum = e.target.dataset.num 
+            const cardnum = e.target.dataset.num;
+            console.log(cardnum);
+            e.target.innerHTML = cardnum;//カードのはてなを数字に置き換える
+            if(firstnum == undefined){
+                firstnum = cardnum;
+            }
+            else{
+                secondnum = cardnum;
+            }
+            if(firstnum == secondnum){
+                
+            }
         }
         init();
         const rndcards = createCards();
@@ -117,6 +128,7 @@
 
 
         createCards();
+        flipcar();
     </script>
 </body>
 </html>
