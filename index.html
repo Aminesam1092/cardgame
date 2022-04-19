@@ -75,15 +75,15 @@
         const createCards = ()=>{
             let cards = [];//カード番号角の配列
             for(let i =1;i <= cardnum;i++){
-               let num = Math.ceil(i / 2);
+                let num = Math.ceil(i / 2);
               let cardindex =  Math.floor(Math.random() * cardnum);
-               console.log(num);
-               if(cards[cardindex] == undefined){
-                   cards[cardindex] = num;
-               }
-               else{
-                   i--;
-               }
+                console.log(num);
+                if(cards[cardindex] == undefined){
+                    cards[cardindex] = num;
+                }
+                else{
+                    i--;
+                }
             }
             console.log(cards);
             return cards;
