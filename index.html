@@ -104,10 +104,13 @@
         const flipcar = ()=>{
             const litags = document.querySelectorAll('li');
             litags.forEach((value)=>{
-                value.addEventListener('click')
+                value.addEventListener('click',evalution);//クリックされたらevalution関数を実行する
             });
         }
 
+        const evalution = (e)=>{
+            const cardnum = e.target.dataset.num 
+        }
         init();
         const rndcards = createCards();
         putcards(rndcards);
