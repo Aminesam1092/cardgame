@@ -62,9 +62,13 @@
             let cards = [];//カード番号角の配列
             for(let i =1;i <= cardnum;i++){
                let num = Math.ceil(i / 2);
-               Math.floor(Math.random() * cardnum);
+              let cardindex =  Math.floor(Math.random() * cardnum);
+               console.log(num);
+               cards[cardindex] = num;
             }
+            console.log(cards);
         }
+        createCards();
     </script>
 </body>
 </html>
